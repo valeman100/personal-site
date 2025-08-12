@@ -24,28 +24,28 @@ const display = Bricolage_Grotesque({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Valerio Mannucci — AI Developer at Joinrs (Rome)",
+  title: "Valerio Mannucci — AI Developer",
   description:
-    "AI/ML developer leading LLM fine‑tuning, embeddings, OCR, semantic search, data pipelines and payments at Joinrs.",
+    "AI/ML developer leading LLM fine‑tuning, embeddings, OCR, semantic search, data pipelines and payments.",
   openGraph: {
-    title: "Valerio Mannucci — AI Developer at Joinrs (Rome)",
+    title: "Valerio Mannucci — AI Developer",
     description:
-      "AI/ML developer leading LLM fine‑tuning, embeddings, OCR, semantic search, data pipelines and payments at Joinrs.",
+      "AI/ML developer leading LLM fine‑tuning, embeddings, OCR, semantic search, data pipelines and payments.",
     type: "website",
     images: [
       {
         url: "/opengraph-image", // Next will append .png
         width: 1200,
         height: 630,
-        alt: "Valerio Mannucci — AI Developer at Joinrs (Rome)",
+        alt: "Valerio Mannucci — AI Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Valerio Mannucci — AI Developer at Joinrs (Rome)",
+    title: "Valerio Mannucci — AI Developer",
     description:
-      "AI/ML developer leading LLM fine‑tuning, embeddings, OCR, semantic search, data pipelines and payments at Joinrs.",
+      "AI/ML developer leading LLM fine‑tuning, embeddings, OCR, semantic search, data pipelines and payments.",
     images: ["/opengraph-image"],
   },
   alternates: {

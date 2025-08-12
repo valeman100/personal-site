@@ -36,7 +36,7 @@ export default function Image() {
             Valerio Mannucci
           </div>
           <div style={{ fontSize: 28, color: "#cbd5e1" }}>
-            AI Developer at Joinrs (Rome)
+            AI Developer
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
