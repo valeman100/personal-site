@@ -21,7 +21,7 @@ export function Hero() {
             className="space-y-6"
           >
             <p className="text-sm uppercase tracking-widest text-zinc-500">
-              AI Developer — Joinrs, Rome
+              AI Developer
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
             <span className="block">Hi, I’m Valerio.</span>
