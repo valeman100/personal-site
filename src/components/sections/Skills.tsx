@@ -4,23 +4,22 @@ import { Parallax, Reveal } from "@/components/motion/scroll";
 const groups = [
   {
     title: "Frontend",
-    items: ["Next.js", "React", "TypeScript", "Tailwind", "Framer Motion"],
+    items: ["Next.js", "React", "TypeScript", "Tailwind"],
   },
   {
     title: "Backend",
-    items: ["Node.js", "NestJS", "Prisma", "PostgreSQL", "Redis"],
+    items: ["PostgreSQL", "Redis", "Flask", "Python", "Node.js", "MySQL", "FastAPI", "Stripe"],
   },
   {
     title: "AI/ML",
     items: [
       "OpenAI API",
       "Prompt Engineering",
-      "LLM Fine-tuning (LLaMA, GPT, BERT)",
       "Embeddings & Semantic Search",
-      "OCR / Whisper",
+      "OCR / RAG / LLM Fine-tuning",
     ],
   },
-  { title: "DevOps", items: ["Vercel", "Docker", "GitHub Actions"] },
+  { title: "DevOps", items: ["Vercel", "Docker", "GitHub Actions", "AWS", "GCP", "Kubernetes", "Git" ] },
   {
     title: "Data & Scraping",
     items: ["Selenium", "Octoparse", "Pipelines", "ETL"],

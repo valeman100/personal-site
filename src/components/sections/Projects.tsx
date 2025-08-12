@@ -45,7 +45,15 @@ const allProjects: Project[] = [
     links: { "github": "https://github.com/valeman100/savr" }
   },
   {
-    id: "p4",
+    "id": "p-insta-ai-automation",
+    "title": "Instagram AI Automation",
+    "description": "AI-powered Instagram automation that pulls tech news from email, scrapes articles, generates captions and images with AI, and auto-posts to Instagram with logging, Docker, and cron support.",
+    "image": "/projects/insta-automation.png",
+    "tags": ["AI", "Python", "Instagram API", "Selenium", "Backend"],
+    "links": { "demo": "https://www.instagram.com/valeemann/", "github": "https://github.com/valeman100/insta-AI-automation" }
+  },
+  {
+    id: "p5",
     title: "Trading Bark",
     description: "Detects dog barks via audio template matching and triggers a random stock lookup with optional webhook alerts.",
     image: "/projects/trading-bark.png",

@@ -9,6 +9,7 @@ import { metadata as loadingMeta } from "./loading-states-design/page.mdx";
 export const metadata = {
   title: "Blog — Vale.dev",
   description: "Articles about AI, web, and developer experience.",
+  alternates: { canonical: "/blog" },
 };
 
 type PostListItem = {
