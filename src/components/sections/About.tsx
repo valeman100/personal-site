@@ -71,10 +71,14 @@ export function About() {
             </Reveal>
             <Reveal delay={0.05}>
               <p className="text-zinc-600 dark:text-zinc-400">
-                I’m an AI Developer and ML Project Lead at Joinrs (Rome, Italy).
-                I innovate how talent connects with companies, building AI systems
-                for information embedding, text recognition, semantic analysis,
-                visual models, and data generation.
+              I'm Valerio, an AI Developer and project lead passionate about building technology 
+              that connects people and ideas in new ways. My journey in AI has led me to 
+              specialize in creating powerful systems driven by powerful models. 
+              I love the challenge of taking a 
+              raw concept and transforming it into a robust, product—whether 
+              that involves large language models or architecting end-to-end 
+              data pipelines. My goal is to build intelligent solutions that feel intuitive and 
+              and genuinely enhance the user experience.
               </p>
             </Reveal>
             <Reveal delay={0.1}>
