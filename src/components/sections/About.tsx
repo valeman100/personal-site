@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Reveal, Parallax } from "@/components/motion/scroll";
+import Image from "next/image";
 
 export function About() {
   return (
@@ -7,7 +8,18 @@ export function About() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
           <Parallax>
-            <Card className="overflow-hidden h-64 sm:h-80 md:h-full neon-shadow border neon-border bg-[--surface-muted]" />
+            <Card className="overflow-hidden h-64 sm:h-80 md:h-96 neon-shadow border neon-border bg-[--surface-muted]">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/me.jpg"
+                  alt="My photo"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  priority
+                />
+              </div>
+            </Card>
           </Parallax>
           <div className="space-y-6">
             <Reveal>

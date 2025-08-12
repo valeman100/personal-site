@@ -7,7 +7,7 @@ export function Experience() {
       company: "Joinrs — Milan, Italy",
       period: "Nov. 2022 — Current",
       desc:
-        "Leading AI solutions across information embedding, OCR, semantic analysis, visual models, and data generation. Fine-tuned LLaMA, GPT, BERT with proprietary datasets. Expert OpenAI toolkit and prompt engineering for robust AI apps.",
+        "Leading AI solutions across information embedding, OCR, semantic analysis, and data generation. Fine-tuned LLaMA, GPT, BERT with proprietary datasets. Expert OpenAI toolkit and prompt engineering for robust AI apps.",
     },
     {
       role: "Scraping Project Lead",
