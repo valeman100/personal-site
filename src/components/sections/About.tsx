@@ -71,7 +71,7 @@ export function About() {
             </Reveal>
             <Reveal delay={0.05}>
               <p className="text-zinc-600 dark:text-zinc-400">
-              I'm Valerio, an AI Developer and project lead passionate about building technology 
+              I&apos;m Valerio, an AI Developer and project lead passionate about building technology 
               that connects people and ideas in new ways. My journey in AI has led me to 
               specialize in creating powerful systems driven by powerful models. 
               I love the challenge of taking a 
