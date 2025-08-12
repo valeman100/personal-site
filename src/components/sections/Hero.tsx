@@ -24,7 +24,7 @@ export function Hero() {
               AI Developer — Joinrs, Milan
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
-              Hi, I’m Vale. I build AI‑driven products that scale.
+              Hi, I’m Valerio. I build AI‑driven products that scale.
             </h1>
             <p className="text-zinc-600 dark:text-zinc-400 max-w-prose">
               I craft delightful user experiences powered by modern ML, with a

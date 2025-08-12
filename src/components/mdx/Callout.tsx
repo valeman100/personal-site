@@ -24,7 +24,7 @@ export function Callout({
       "border-emerald-500 bg-[color-mix(in_oklab,theme(colors.emerald.500)_8%,transparent)]",
   };
 
-  const IconByVariant: Record<CalloutVariant, any> = {
+  const IconByVariant: Record<CalloutVariant, typeof Info> = {
     info: Info,
     warning: AlertTriangle,
     success: CheckCircle2,

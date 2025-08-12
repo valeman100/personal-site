@@ -11,8 +11,10 @@ export function useMDXComponents(
 ) {
   return {
     // Replace <a> with Next.js <Link>
-    a: (props: any) => (
-      <Link {...props} className="text-[--accent] underline underline-offset-2" />
+    a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
+      <Link href={props.href ?? "#"} className="text-[--accent] underline underline-offset-2">
+        {props.children}
+      </Link>
     ),
     // Expose design-system components to MDX
     Badge,

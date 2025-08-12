@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Environment, ContactShadows, RoundedBox, Edges } from "@react-three/drei";
+import { OrbitControls, Environment } from "@react-three/drei";
 import { Suspense } from "react";
 import * as THREE from "three";
 
@@ -11,29 +11,32 @@ function NeonSculpt({ hyper, hover }: { hyper: boolean; hover: boolean }) {
   useFrame((state, delta) => {
     if (!group.current) return;
     const t = state.clock.getElapsedTime();
-    group.current.rotation.y += delta * (hyper ? 1.6 : 0.6);
+    group.current.rotation.y += delta * (hyper ? 1.4 : 0.5);
     const targetX = hover ? 0.25 : 0.1;
-    group.current.rotation.x = THREE.MathUtils.lerp(group.current.rotation.x, targetX, 0.08);
-    const pulse = 1 + Math.sin(t * (hyper ? 2.4 : 1.6)) * 0.02;
-    const s = (hyper ? 1.06 : 1.0) * pulse;
-    group.current.scale.setScalar(THREE.MathUtils.lerp(group.current.scale.x, s, 0.08));
+    group.current.rotation.x = THREE.MathUtils.lerp(group.current.rotation.x, targetX, 0.06);
+    const pulse = 1 + Math.sin(t * (hyper ? 2.0 : 1.2)) * 0.005;
+    const s = (hyper ? 1.03 : 1.0) * pulse;
+    group.current.scale.setScalar(THREE.MathUtils.lerp(group.current.scale.x, s, 0.06));
   });
   const baseColor = hyper ? 0xacf7c1 : 0x38bdf8; // celadon / deep-sky-blue
   return (
-    <group ref={group} position={[0, 0, 0]}>
-      <mesh>
+    <group ref={group} position={[0, 0.08, 0]}>
+      <mesh castShadow>
         <torusKnotGeometry args={[1.15, 0.35, hyper ? 384 : 256, 48, 2, 3]} />
         <meshPhysicalMaterial
           color={baseColor}
           metalness={0.88}
-          roughness={0.1}
+          roughness={0.2}
           clearcoat={1}
           clearcoatRoughness={0.04}
           envMapIntensity={hyper ? 1.8 : 1.2}
           emissive={new THREE.Color(baseColor)}
-          emissiveIntensity={hyper ? 0.45 : 0.25}
+          emissiveIntensity={hyper ? 0.35 : 0.2}
+          // Nudge surface slightly to reduce z-fighting with overlay edges
+          polygonOffset
+          polygonOffsetFactor={1}
+          polygonOffsetUnits={1}
         />
-        <Edges threshold={15} color={baseColor as unknown as THREE.ColorRepresentation} />
       </mesh>
     </group>
   );
@@ -107,13 +110,42 @@ export function NeonScene() {
       onPointerEnter={() => setHover(true)}
       onPointerLeave={() => setHover(false)}
     >
-      <Canvas camera={{ position: [0, 0, 5], fov: 60 }} dpr={[1, 2]}>
+      <Canvas
+        camera={{ position: [0, 0, 5], fov: 60, near: 0.5, far: 20 }}
+        dpr={[1, 1.5]}
+        gl={{ antialias: true, alpha: false, powerPreference: "high-performance", precision: "highp" }}
+        shadows
+        onCreated={({ gl }) => {
+          gl.shadowMap.enabled = true;
+          gl.shadowMap.type = THREE.PCFSoftShadowMap;
+          gl.toneMapping = THREE.ACESFilmicToneMapping;
+        }}
+      >
         <Suspense fallback={null}>
           <color attach="background" args={[0, 0, 0]} />
-          <ambientLight intensity={0.5} />
-          <pointLight position={[4, 6, 3]} intensity={3} color={hyper ? 0xacf7c1 : 0x38bdf8} />
+          <ambientLight intensity={0.55} />
+          <directionalLight
+            castShadow
+            position={[6, 8, 6]}
+            intensity={2.0}
+            color={hyper ? 0xacf7c1 : 0x38bdf8}
+            shadow-mapSize-width={4096}
+            shadow-mapSize-height={4096}
+            shadow-camera-near={0.5}
+            shadow-camera-far={12}
+            shadow-camera-left={-2.5}
+            shadow-camera-right={2.5}
+            shadow-camera-top={2.5}
+            shadow-camera-bottom={-2.5}
+            shadow-bias={-0.0006}
+            shadow-normalBias={0.045}
+            shadow-radius={3}
+          />
           <Environment preset="city" />
-          <ContactShadows position={[0, -1.6, 0]} opacity={0.35} scale={10} blur={3} far={3} />
+          <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -1.72, 0]} receiveShadow>
+            <circleGeometry args={[5, 64]} />
+            <shadowMaterial transparent opacity={0.35} />
+          </mesh>
           <Particles hyper={hyper} />
           <NeonSculpt hyper={hyper} hover={hover} />
           <OrbitControls enablePan={false} enableZoom={false} autoRotate autoRotateSpeed={hyper ? 2.2 : 1.0} />

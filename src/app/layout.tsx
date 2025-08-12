@@ -22,18 +22,18 @@ const display = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "Vale — AI Developer at Joinrs (Milan)",
+  title: "Valerio Mannucci — AI Developer at Joinrs (Rome)",
   description:
     "AI/ML developer leading LLM fine‑tuning, embeddings, OCR, semantic search, data pipelines and payments at Joinrs.",
   openGraph: {
-    title: "Vale — AI Developer at Joinrs (Milan)",
+    title: "Valerio Mannucci — AI Developer at Joinrs (Rome)",
     description:
       "AI/ML developer leading LLM fine‑tuning, embeddings, OCR, semantic search, data pipelines and payments at Joinrs.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vale — AI Developer at Joinrs (Milan)",
+    title: "Valerio Mannucci — AI Developer at Joinrs (Rome)",
     description:
       "AI/ML developer leading LLM fine‑tuning, embeddings, OCR, semantic search, data pipelines and payments at Joinrs.",
   },

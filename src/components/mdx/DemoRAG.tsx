@@ -69,8 +69,8 @@ export function DemoRAG() {
           </Button>
         </div>
 
-        {results.length === 0 ? (
-          <p className="text-sm text-zinc-500">No results. Try "embeddings" or "streaming".</p>
+          {results.length === 0 ? (
+          <p className="text-sm text-zinc-500">No results. Try &quot;embeddings&quot; or &quot;streaming&quot;.</p>
         ) : (
           <ul className="space-y-2">
             {results.map((r) => (

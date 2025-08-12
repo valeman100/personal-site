@@ -10,7 +10,7 @@ function Skeleton({ className }: { className?: string }) {
 }
 
 export function LoadingPlayground() {
-  const [username, setUsername] = useState("vale");
+  const [username, setUsername] = useState("Vale");
   const [draft, setDraft] = useState(username);
   const [isSaving, setIsSaving] = useState(false);
   const [mode, setMode] = useState<"skeleton" | "optimistic">("skeleton");
@@ -35,8 +35,12 @@ export function LoadingPlayground() {
         <CardTitle className="flex items-center justify-between">
           <span>Loading states playground</span>
           <div className="inline-flex gap-2">
-            <Button size="sm" variant={mode === "skeleton" ? "default" : "outline"} onClick={() => setMode("skeleton")}>Skeleton</Button>
-            <Button size="sm" variant={mode === "optimistic" ? "default" : "outline"} onClick={() => setMode("optimistic")}>Optimistic</Button>
+            <Button className="h-8 px-3" variant={mode === "skeleton" ? "default" : "outline"} onClick={() => setMode("skeleton")}>
+              Skeleton
+            </Button>
+            <Button className="h-8 px-3" variant={mode === "optimistic" ? "default" : "outline"} onClick={() => setMode("optimistic")}>
+              Optimistic
+            </Button>
           </div>
         </CardTitle>
       </CardHeader>
@@ -58,7 +62,7 @@ export function LoadingPlayground() {
           ) : (
             <div>
               <div className="font-medium">@{username}</div>
-              <p className="text-sm text-zinc-600 dark:text-zinc-300">Hi, I'm {username}. I like smooth UIs and neon gradients.</p>
+              <p className="text-sm text-zinc-600 dark:text-zinc-300">Hi, I&apos;m {username}. I like smooth UIs and neon gradients.</p>
             </div>
           )}
         </div>
