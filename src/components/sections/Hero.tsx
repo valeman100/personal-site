@@ -21,18 +21,19 @@ export function Hero() {
             className="space-y-6"
           >
             <p className="text-sm uppercase tracking-widest text-zinc-500">
-              AI Developer — Joinrs, Milan
+              AI Developer — Joinrs, Rome
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
-              Hi, I’m Valerio. I build AI‑driven products that scale.
+            <span className="block">Hi, I’m Valerio.</span>
+            <span className="block">I love building AI‑driven products.</span>
             </h1>
             <p className="text-zinc-600 dark:text-zinc-400 max-w-prose">
-              I craft delightful user experiences powered by modern ML, with a
+              I craft delightful user experiences powered by modern LLMs, with a
               focus on performance, accessibility, and clean architecture.
             </p>
             <div className="flex items-center gap-3">
-              <Button asChild className="neon-shadow">
-                <a href="#projects">View my work</a>
+            <Button variant="secondary" asChild className="border neon-border">
+              <a href="#projects">View my works</a>
               </Button>
               <Button variant="secondary" asChild className="border neon-border">
                 <a href="#contact">Contact me</a>
@@ -64,6 +65,5 @@ function BackgroundGradient() {
 
 import React from "react";
 
-// legacy particles removed; replaced by NeonScene 3D
 
 

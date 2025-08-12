@@ -15,7 +15,7 @@ export function About() {
             </Reveal>
             <Reveal delay={0.05}>
               <p className="text-zinc-600 dark:text-zinc-400">
-                I’m an AI Developer and ML Project Lead at Joinrs (Milan, Italy).
+                I’m an AI Developer and ML Project Lead at Joinrs (Rome, Italy).
                 I innovate how talent connects with companies, building AI systems
                 for information embedding, text recognition, semantic analysis,
                 visual models, and data generation.
@@ -28,7 +28,7 @@ export function About() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 text-sm">
-                    <li>• 6+ years building web apps and AI integrations</li>
+                    <li>• 3+ years building web apps and AI integrations</li>
                     <li>• Led multiple launches reaching thousands of users</li>
                     <li>• Speaker and open-source contributor</li>
                   </ul>
