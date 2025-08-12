@@ -6,6 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Github } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
+const isDev = process.env.NODE_ENV !== "production";
+const rawBlog = process.env.NEXT_PUBLIC_BLOG_ENABLED ?? process.env.BLOG_ENABLED;
+const blogEnabled = rawBlog === "true" || (rawBlog == null && isDev);
+
 const navItems = [
   { href: "/#home", label: "Home" },
   { href: "/#about", label: "About" },
@@ -13,8 +17,8 @@ const navItems = [
   { href: "/#projects", label: "Projects" },
   { href: "/#experience", label: "Experience" },
   { href: "/#contact", label: "Contact" },
-  { href: "/blog", label: "Blog" },
-];
+  ...(blogEnabled ? [{ href: "/blog", label: "Blog" }] : []),
+] as const;
 
 export function Navbar() {
   return (

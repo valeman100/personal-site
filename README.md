@@ -94,6 +94,21 @@ Minimal example:
 
 When you need to scale, consider MDX posts (e.g. Contentlayer and `.mdx` files) while keeping the same components.
 
+### Enable/disable Blog
+- Default: **ON in development**, **OFF in production**.
+- Override by setting `NEXT_PUBLIC_BLOG_ENABLED` (or `BLOG_ENABLED`) a `"true"`/`"false"`.
+- Quando è OFF: le route `/blog/*` rispondono 404 e il link in navbar è nascosto.
+- Esempi:
+  - Dev forzato OFF:
+    ```
+    NEXT_PUBLIC_BLOG_ENABLED=false
+    ```
+  - Prod ON:
+    ```
+    NEXT_PUBLIC_BLOG_ENABLED=true
+    ```
+  - Puoi creare un file `.env.local` e incollarci uno dei valori.
+
 ## Customize
 - **Color & theme**: tweak tokens in `src/app/globals.css` (`--accent`, surfaces, gradients, neon, etc.).
 - **Fonts**: set in `src/app/layout.tsx` (Geist + Bricolage Grotesque); adjust Google Fonts imports and variables.

@@ -1,9 +1,26 @@
+import Link from "next/link";
 import type { ComponentType } from "react";
+import { Badge } from "@/components/ui/badge";
+import { Callout } from "@/components/mdx/Callout";
+import { DemoRAG } from "@/components/mdx/DemoRAG";
+import { LoadingPlayground } from "@/components/mdx/LoadingPlayground";
 
+// Map Markdown elements and expose UI components inside MDX content
 export function useMDXComponents(
   components: Record<string, ComponentType<unknown>>
 ) {
-  return components;
+  return {
+    // Replace <a> with Next.js <Link>
+    a: (props: any) => (
+      <Link {...props} className="text-[--accent] underline underline-offset-2" />
+    ),
+    // Expose design-system components to MDX
+    Badge,
+    Callout,
+    DemoRAG,
+    LoadingPlayground,
+    ...components,
+  } as Record<string, ComponentType<unknown>>;
 }
 
 

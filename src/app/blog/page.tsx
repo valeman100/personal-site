@@ -3,13 +3,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Reveal, Parallax } from "@/components/motion/scroll";
 import { Tilt } from "@/components/motion/tilt";
+import { metadata as ragMeta } from "./rag-on-nextjs/page.mdx";
+import { metadata as loadingMeta } from "./loading-states-design/page.mdx";
 
 export const metadata = {
   title: "Blog — Vale.dev",
   description: "Articles about AI, web, and developer experience.",
 };
 
-type Post = {
+type PostListItem = {
   slug: string;
   title: string;
   excerpt: string;
@@ -17,22 +19,20 @@ type Post = {
   tags: string[];
 };
 
-const posts: Post[] = [
+const posts: PostListItem[] = [
   {
     slug: "rag-on-nextjs",
-    title: "Getting Started with RAG on Next.js",
-    excerpt:
-      "A practical intro to Retrieval-Augmented Generation in Next.js with vector search and streaming.",
-    date: "2025-02-01",
-    tags: ["AI", "RAG", "Next.js"],
+    title: ragMeta.title,
+    excerpt: ragMeta.description,
+    date: ragMeta.date,
+    tags: ragMeta.tags,
   },
   {
     slug: "loading-states-design",
-    title: "Designing delightful loading states",
-    excerpt:
-      "Patterns to make perceived performance great: skeletons, optimistic UI, and motion.",
-    date: "2025-01-18",
-    tags: ["UX", "Motion", "Design"],
+    title: loadingMeta.title,
+    excerpt: loadingMeta.description,
+    date: loadingMeta.date,
+    tags: loadingMeta.tags,
   },
 ];
 
