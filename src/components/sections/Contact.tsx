@@ -106,7 +106,7 @@ export function Contact() {
                   { href: "https://www.linkedin.com/in/valerio-mannucci/", icon: Linkedin, label: "LinkedIn" },
                   { href: "https://x.com/Valeman100", icon: Twitter, label: "Twitter" },
                   { href: "https://www.instagram.com/valeemann/", icon: Instagram, label: "Instagram" },
-                  { href: "https://www.tiktok.com/@ai_action_call", icon: Music2, label: "TikTok" },
+                  { href: "https://www.tiktok.com/@valeemann", icon: Music2, label: "TikTok" },
                 ].map((item) => (
                   <a
                     key={item.label}
