@@ -48,6 +48,15 @@ export const metadata: Metadata = {
       "AI/ML developer leading LLM fine‑tuning, embeddings, OCR, semantic search, data pipelines and payments.",
     images: ["/opengraph-image"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-48.png", type: "image/png", sizes: "48x48" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
+    shortcut: ["/favicon.ico"],
+  },
   alternates: {
     canonical: "/",
   },
