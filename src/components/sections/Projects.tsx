@@ -22,7 +22,7 @@ const allProjects: Project[] = [
     id: "p1",
     title: "Email Labeler",
     description: "AI-powered Gmail labeling SaaS that analyzes emails and applies your custom labels automatically. Connect Gmail, configure labels, and let AI organize your inbox on demand or on a daily schedule.",
-    image: "/projects/email-labeler.gif",
+    image: "/projects/email-labeler.webp",
     tags: ["AI", "Flask", "Gmail API", "Stripe", "Backend", "Frontend"],
     links: { demo: "https://www.email-labeler.com/" }
   },
@@ -30,7 +30,7 @@ const allProjects: Project[] = [
     id: "p2",
     title: "SnapBook API",
     description: "Flask backend for AI-powered book recommendations from bookshelf images, using Google Vision, OpenAI, and Pinecone RAG; includes user auth and Stripe billing.",
-    image: "/projects/snapbook.gif",
+    image: "/projects/snapbook.webp",
     tags: ["AI", "Flask", "RAG", "Stripe", "Google Cloud", "Backend"],
     links: {
       demo: "https://www.snapbook.world"
@@ -40,7 +40,7 @@ const allProjects: Project[] = [
     id: "p3",
     title: "Savr",
     description: "Gen Z fintech web app combining gamified learning, smart investing, and goal-based saving with a modern React/MUI UI.",
-    image: "/projects/savr.gif",
+    image: "/projects/savr.webp",
     tags: ["React", "TypeScript", "Frontend", "Fintech"],
     links: { "github": "https://github.com/valeman100/savr" }
   },
@@ -48,7 +48,7 @@ const allProjects: Project[] = [
     "id": "p-insta-ai-automation",
     "title": "Instagram AI Automation",
     "description": "AI-powered Instagram automation that pulls tech news from email, scrapes articles, generates captions and images with AI, and auto-posts to Instagram with logging, Docker, and cron support.",
-    "image": "/projects/insta-automation.png",
+    "image": "/projects/insta-automation.jpeg",
     "tags": ["AI", "Python", "Instagram API", "Selenium", "Backend"],
     "links": { "demo": "https://www.instagram.com/valeemann/", "github": "https://github.com/valeman100/insta-AI-automation" }
   },
@@ -56,7 +56,7 @@ const allProjects: Project[] = [
     id: "p5",
     title: "Trading Bark",
     description: "Detects dog barks via audio template matching and triggers a random stock lookup with optional webhook alerts.",
-    image: "/projects/trading-bark.png",
+    image: "/projects/trading-bark.jpeg",
     tags: ["Python", "Audio", "Flask", "YFinance", "Backend"],
     links: { demo: "https://www.youtube.com/watch?v=DpRPT5aoobE", github: "https://github.com/valeman100/trading-bark" },
   }

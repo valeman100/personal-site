@@ -55,7 +55,7 @@ export function About() {
             <Card className="overflow-hidden h-64 sm:h-80 md:h-96 neon-shadow border neon-border bg-[--surface-muted]">
               <div className="relative w-full h-full">
                 <Image
-                  src="/me.jpg"
+                  src="/me.jpeg"
                   alt="My photo"
                   fill
                   className="object-cover"
