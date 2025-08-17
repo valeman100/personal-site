@@ -30,7 +30,7 @@ const allProjects: Project[] = [
     id: "p2",
     title: "SnapBook API",
     description: "Flask backend for AI-powered book recommendations from bookshelf images, using Google Vision, OpenAI, and Pinecone RAG; includes user auth and Stripe billing.",
-    image: "/projects/snapbook.webp",
+    image: "/projects/snapbook.mp4",
     tags: ["AI", "Flask", "RAG", "Stripe", "Google Cloud", "Backend"],
     links: {
       demo: "https://www.snapbook.world"
@@ -40,7 +40,7 @@ const allProjects: Project[] = [
     id: "p3",
     title: "Savr",
     description: "Gen Z fintech web app combining gamified learning, smart investing, and goal-based saving with a modern React/MUI UI.",
-    image: "/projects/savr.webp",
+    image: "/projects/savr.mp4",
     tags: ["React", "TypeScript", "Frontend", "Fintech"],
     links: { "github": "https://github.com/valeman100/savr" }
   },
