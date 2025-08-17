@@ -106,14 +106,28 @@ export function Projects() {
                   <Tilt>
                     <Card className="overflow-hidden group neon-shadow border neon-border bg-[--surface-muted]">
                       <div className="bg-[--surface-muted]">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          loading="lazy"
-                          decoding="async"
-                          className="w-full h-auto object-contain"
-                        />
+                        {project.image.toLowerCase().endsWith(".mp4") ? (
+                          <video
+                            src={project.image}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            preload="metadata"
+                            className="w-full h-auto object-contain"
+                          />
+                        ) : (
+                          <>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                              src={project.image}
+                              alt={project.title}
+                              loading="lazy"
+                              decoding="async"
+                              className="w-full h-auto object-contain"
+                            />
+                          </>
+                        )}
                       </div>
                       <CardHeader>
                         <CardTitle>{project.title}</CardTitle>
