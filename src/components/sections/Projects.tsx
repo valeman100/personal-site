@@ -22,7 +22,7 @@ const allProjects: Project[] = [
     id: "p1",
     title: "Email Labeler",
     description: "AI-powered Gmail labeling SaaS that analyzes emails and applies your custom labels automatically. Connect Gmail, configure labels, and let AI organize your inbox on demand or on a daily schedule.",
-    image: "/projects/email-labeler.webp",
+    image: "/projects/trimmed-email-labeler.mp4",
     tags: ["AI", "Flask", "Gmail API", "Stripe", "Backend", "Frontend"],
     links: { demo: "https://www.email-labeler.com/" }
   },
