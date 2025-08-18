@@ -17,6 +17,7 @@ const groups = [
       "Prompt Engineering",
       "Embeddings & Semantic Search",
       "OCR / RAG / LLM Fine-tuning",
+      "n8n pipelines",
     ],
   },
   { title: "DevOps", items: ["Vercel", "Docker", "GitHub Actions", "AWS", "GCP", "Kubernetes", "Git" ] },
