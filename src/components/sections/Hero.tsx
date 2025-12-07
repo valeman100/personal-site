@@ -24,16 +24,16 @@ export function Hero() {
               AI Developer
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
-            <span className="block">Hi, I’m Valerio.</span>
-            <span className="block">I love building AI‑driven products.</span>
+              <span className="block">Hi, I’m Valerio.</span>
+              <span className="block">Freelance AI & Software Engineer.</span>
             </h1>
             <p className="text-zinc-600 dark:text-zinc-400 max-w-prose">
               I craft delightful user experiences powered by modern LLMs, with a
               focus on performance, accessibility, and clean architecture.
             </p>
             <div className="flex items-center gap-3">
-            <Button variant="secondary" asChild className="border neon-border">
-              <a href="#projects">View my works</a>
+              <Button variant="secondary" asChild className="border neon-border">
+                <a href="#projects">View my works</a>
               </Button>
               <Button variant="secondary" asChild className="border neon-border">
                 <a href="#contact">Contact me</a>

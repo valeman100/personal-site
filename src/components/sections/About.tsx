@@ -71,14 +71,9 @@ export function About() {
             </Reveal>
             <Reveal delay={0.05}>
               <p className="text-zinc-600 dark:text-zinc-400">
-              I&apos;m Valerio, an AI Developer and project lead passionate about building technology 
-              that connects people and ideas in new ways. My journey in AI has led me to 
-              specialise in creating powerful systems driven by powerful models. 
-              I love the challenge of taking a 
-              raw concept and transforming it into a robust, product whether 
-              that involves large language models or architecting end-to-end 
-              data pipelines. My goal is to build intelligent solutions that feel intuitive 
-              and genuinely enhance the user experience.
+                After three years as an AI Developer in a Milan-based startup, I left my 9-5 to take time for myself, travel, and redefine my path.
+                I’m currently exploring Asia (China → Vietnam → Thailand), working remotely, building the foundations of my freelance career as an AI/ML & Software Engineer.
+                My goal is to work on meaningful, challenging projects with people and teams I genuinely connect with—while building a life that feels authentic, free, and aligned with my passions.
               </p>
             </Reveal>
             <Reveal delay={0.1}>

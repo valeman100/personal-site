@@ -3,9 +3,15 @@ import { Reveal, Parallax } from "@/components/motion/scroll";
 export function Experience() {
   const items = [
     {
+      role: "Freelance AI & Software Engineer",
+      company: "Remote",
+      period: "Nov. 2025 — Current",
+      desc: "Building the foundations of my freelance career. Working on meaningful AI/ML and Software projects while traveling and exploring new cultures.",
+    },
+    {
       role: "AI Developer / ML & AI Project Lead",
       company: "Joinrs — Rome, Italy",
-      period: "Nov. 2022 — Current",
+      period: "Nov. 2022 — Nov. 2025",
       desc:
         "Leading AI solutions across information embedding, OCR, semantic analysis, and data generation. Fine-tuned LLMs with proprietary datasets. Expert OpenAI/GoogleAI toolkit and prompt engineering for robust AI apps.",
     },
