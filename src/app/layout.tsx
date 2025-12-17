@@ -24,28 +24,28 @@ const display = Bricolage_Grotesque({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Valerio Mannucci — AI Developer",
+  title: "Valerio Mannucci — AI & Software Engineer",
   description:
-    "AI/ML developer leading LLM fine‑tuning, embeddings, OCR, semantic search, data pipelines and payments.",
+    "Developing delightful experiences powered by modern LLMs, with a focus on performance, accessibility, and clean architecture.",
   openGraph: {
-    title: "Valerio Mannucci — AI Developer",
+    title: "Valerio Mannucci — AI & Software Engineer",
     description:
-      "AI/ML developer leading LLM fine‑tuning, embeddings, OCR, semantic search, data pipelines and payments.",
+      "Developing delightful experiences powered by modern LLMs, with a focus on performance, accessibility, and clean architecture.",
     type: "website",
     images: [
       {
         url: "/opengraph-image", // Next will append .png
         width: 1200,
         height: 630,
-        alt: "Valerio Mannucci — AI Developer",
+        alt: "Valerio Mannucci — AI & Software Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Valerio Mannucci — AI Developer",
+    title: "Valerio Mannucci — AI & Software Engineer",
     description:
-      "AI/ML developer leading LLM fine‑tuning, embeddings, OCR, semantic search, data pipelines and payments.",
+      "Developing delightful experiences powered by modern LLMs, with a focus on performance, accessibility, and clean architecture.",
     images: ["/opengraph-image"],
   },
   icons: {
