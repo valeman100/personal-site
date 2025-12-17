@@ -20,6 +20,14 @@ type Project = {
 const allProjects: Project[] = [
   {
     id: "p1",
+    title: "Aesthetica AI",
+    description: "Local AI solution for automating pre/post cosmetic surgery image management. Features automatic pose classification, intelligent matching, and adaptive image processing for consistent patient records.",
+    image: "/projects/aesthetic-ai.png",
+    tags: ["AI", "Computer Vision", "Python", "Automation"],
+    links: {}
+  },
+  {
+    id: "p2",
     title: "Email Labeler",
     description: "AI-powered Gmail labeling SaaS that analyzes emails and applies your custom labels automatically. Connect Gmail, configure labels, and let AI organize your inbox on demand or on a daily schedule.",
     image: "/projects/trimmed-email-labeler.mp4",
@@ -27,7 +35,7 @@ const allProjects: Project[] = [
     links: { demo: "https://www.email-labeler.com/" }
   },
   {
-    id: "p2",
+    id: "p3",
     title: "SnapBook API",
     description: "Flask backend for AI-powered book recommendations from bookshelf images, using Google Vision, OpenAI, and Pinecone RAG; includes user auth and Stripe billing.",
     image: "/projects/snapbook.mp4",
@@ -37,7 +45,7 @@ const allProjects: Project[] = [
     }
   },
   {
-    id: "p3",
+    id: "p4",
     title: "Savr",
     description: "Gen Z fintech web app combining gamified learning, smart investing, and goal-based saving with a modern React/MUI UI.",
     image: "/projects/savr.mp4",
@@ -53,7 +61,7 @@ const allProjects: Project[] = [
     "links": { "demo": "https://www.instagram.com/valeemann/", "github": "https://github.com/valeman100/insta-AI-automation" }
   },
   {
-    id: "p5",
+    id: "p6",
     title: "Trading Bark",
     description: "Detects dog barks via audio template matching and triggers a random stock lookup with optional webhook alerts.",
     image: "/projects/trading-bark.jpeg",
