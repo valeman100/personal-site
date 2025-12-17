@@ -32,21 +32,12 @@ export const metadata: Metadata = {
     description:
       "Developing delightful experiences powered by modern LLMs, with a focus on performance, accessibility, and clean architecture.",
     type: "website",
-    images: [
-      {
-        url: "/opengraph-image", // Next will append .png
-        width: 1200,
-        height: 630,
-        alt: "Valerio Mannucci — AI & Software Engineer",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Valerio Mannucci — AI & Software Engineer",
     description:
       "Developing delightful experiences powered by modern LLMs, with a focus on performance, accessibility, and clean architecture.",
-    images: ["/opengraph-image"],
   },
   icons: {
     icon: [
