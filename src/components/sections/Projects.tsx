@@ -22,7 +22,7 @@ const allProjects: Project[] = [
     id: "p1",
     title: "Aesthetica AI",
     description: "Local AI solution for automating pre/post cosmetic surgery image management. Features automatic pose classification, intelligent matching, and adaptive image processing for consistent patient records.",
-    image: "/projects/aesthetic-ai.png",
+    image: "/projects/aesthetic-ai.jpeg",
     tags: ["AI", "Computer Vision", "Python", "Automation"],
     links: {}
   },
