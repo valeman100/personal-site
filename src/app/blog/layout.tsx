@@ -1,14 +1,16 @@
 import { ReactNode } from "react";
-import { notFound } from "next/navigation";
+import { BlogExtras } from "../../components/layout/BlogExtras";
+import { BlogFooterWrapper } from "@/components/layout/BlogFooterWrapper";
 
 export default function BlogLayout({ children }: { children: ReactNode }) {
-  const isDev = process.env.NODE_ENV !== "production";
-  const raw = process.env.NEXT_PUBLIC_BLOG_ENABLED ?? process.env.BLOG_ENABLED;
-  const enabled = raw === "true" || (raw == null && isDev);
-
-  if (!enabled) return notFound();
-
-  return <>{children}</>;
+  // Add padding-top to account for fixed navbar (h-14 = 3.5rem) + extra spacing
+  return (
+    <div className="pt-20 min-h-screen">
+      <BlogExtras />
+      {children}
+      <BlogFooterWrapper />
+    </div>
+  );
 }
 
 

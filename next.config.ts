@@ -3,10 +3,6 @@ import createMDX from "@next/mdx";
 
 const withMDX = createMDX({
   extension: /\.mdx?$/,
-  // Ensure MDX components mapping comes from `src/mdx-components.tsx`
-  options: {
-    providerImportSource: "@/mdx-components",
-  },
 });
 
 const nextConfig: NextConfig = {

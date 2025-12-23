@@ -1,0 +1,65 @@
+export const metadata = {
+  title: "Aesthetica AI: Automated Image Management for Aesthetic Surgery",
+  description: "A fully local AI system for pre and post-operative image comparison in aesthetic surgery, using computer vision and image processing.",
+  date: "2025-12-17",
+  tags: ["AI", "Computer Vision", "Python", "Automation"],
+  image: "/blog/aesthetica-ai-cover.png",
+  openGraph: { type: "article" },
+};
+
+import { Badge } from "@/components/ui/badge";
+
+# Aesthetica AI: Automated Image Management for Aesthetic Surgery
+
+![Aesthetica AI Cover](/blog/aesthetica-ai-cover.png)
+
+<div className="flex gap-2 mb-8 mt-6">
+  <Badge variant="secondary">AI</Badge>
+  <Badge variant="secondary">Computer Vision</Badge>
+  <Badge>Case Study</Badge>
+</div>
+
+This project represents my **first freelance delivery as an independent developer** after leaving my full-time role to work remotely and on my own terms.
+
+I developed a fully local, AI-based system designed to automate the management of **pre- and post-operative images** for aesthetic surgery.  
+The objective was to ensure **visual consistency, accurate comparisons, and structured organization** of patient photos using a combination of computer vision and image processing techniques.
+
+## The Project
+
+### Phase 1 – Recognition and Matching
+
+The primary goal was to automate what is traditionally a fully manual and time-consuming workflow.
+
+- **Automatic pose classification**: Front, back, and profile detection with ~95% accuracy.
+- **Intelligent pre/post matching**: Reliable pairing even when multiple images exist for the same pose.
+- **Automatic generation**: Creation of standardized side-by-side comparison images.
+- **Structured storage**: Export in `.webp` format with consistent naming conventions and per-patient folder structures.
+
+### Phase 2 – Technical Optimization and Image Normalization
+
+To achieve professional and unbiased results, the system applies several automatic refinements:
+
+- **Adaptive zooming**: Detection of anatomical reference points (e.g. hips) to preserve consistent proportions.
+- **Automatic subject segmentation**: Background removal with replacement options (solid color, gradient, or custom image).
+- **Visual normalization**: Automatic contrast, brightness, and color adjustments to align photos taken under different conditions.
+- **Geometric alignment**: Improved left/right profile matching through classical geometric techniques combined with AI predictions.
+
+## Technical Notes
+
+> The system deliberately avoids arbitrary top/bottom cropping to prevent framing errors and comparison bias.  
+> Instead, proportions are preserved through visual compensation and alignment strategies.
+
+This project clearly highlighted some **current limitations of AI-based vision models**.  
+In particular, distinguishing left vs right profile images in real-world, unconstrained datasets proved unreliable when relying on AI alone. The final solution required combining model predictions with **classical statistical and geometric methods**, rather than trusting a single model output.
+
+The pipeline is probabilistic by nature (as with any AI system), but after several days of iteration and testing, it proved to be **stable, accurate, and robust on real clinical datasets**.
+
+## Conclusion
+
+This project took more iterations than initially expected, but pushing through edge cases is what ultimately made the system solid.
+
+It reminded me why I enjoy freelance work:  
+solving real-world problems, understanding where AI falls short, and engineering **practical solutions beyond the hype**.
+
+This was a technically demanding challenge, and I deliberately invested extra time to ensure the final result fully met professional expectations.  
+Looking back, I’m confident this was one of the most complex and rewarding engineering problems I’ve tackled so far.

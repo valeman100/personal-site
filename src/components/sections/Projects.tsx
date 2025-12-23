@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Parallax, Reveal } from "@/components/motion/scroll";
 import { Tilt } from "@/components/motion/tilt";
+import Link from "next/link";
 
 type Project = {
   id: string;
@@ -15,6 +16,7 @@ type Project = {
   image: string;
   tags: string[];
   links?: { demo?: string; github?: string };
+  blogLink?: string;
 };
 
 const allProjects: Project[] = [
@@ -24,7 +26,8 @@ const allProjects: Project[] = [
     description: "Local AI solution for automating pre/post cosmetic surgery image management. Features automatic pose classification, intelligent matching, and adaptive image processing for consistent patient records.",
     image: "/projects/aesthetic-ai.jpeg",
     tags: ["AI", "Computer Vision", "Python", "Automation"],
-    links: {}
+    links: {},
+    blogLink: "/blog/aesthetica-ai"
   },
   {
     id: "p2",
@@ -164,6 +167,13 @@ export function Projects() {
                               <a href={project.links.github} target="_blank">
                                 GitHub
                               </a>
+                            </Button>
+                          )}
+                          {project.blogLink && (
+                            <Button asChild variant="secondary" className="border-zinc-700 bg-zinc-800 hover:bg-zinc-700">
+                              <Link href={project.blogLink}>
+                                Read Blog
+                              </Link>
                             </Button>
                           )}
                         </div>

@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 :root {
+  --prose-text: var(--color-zinc-800);
+  --prose-heading: var(--foreground);
   /* Palette */
   --smoky-black: #0f1108;
   --polynesian-blue: #1f487e;
@@ -17,13 +19,13 @@
   --accent-foreground: #0a0a0a;
   --surface: #ffffff;
   --surface-muted: #f8fafc;
-  --border-color: rgba(0,0,0,0.08);
+  --border-color: rgba(0, 0, 0, 0.08);
   --particle: rgba(31, 72, 126, 0.35);
 
   /* Gradients */
-  --gradient-hero: radial-gradient(60% 60% at 50% 0%, rgba(56,189,248,.18), rgba(92,0,41,.08) 40%, transparent 70%);
-  --gradient-card: linear-gradient(135deg, rgba(31,72,126,.12), rgba(56,189,248,.08));
-  --gradient-strip: linear-gradient(135deg, rgba(56,189,248,.18), rgba(92,0,41,.10));
+  --gradient-hero: radial-gradient(60% 60% at 50% 0%, rgba(56, 189, 248, .18), rgba(92, 0, 41, .08) 40%, transparent 70%);
+  --gradient-card: linear-gradient(135deg, rgba(31, 72, 126, .12), rgba(56, 189, 248, .08));
+  --gradient-strip: linear-gradient(135deg, rgba(56, 189, 248, .18), rgba(92, 0, 41, .10));
 }
 
 @theme inline {
@@ -37,18 +39,20 @@
 }
 
 .dark {
+  --prose-text: var(--color-zinc-50);
+  --prose-heading: #ffffff;
   --background: var(--smoky-black);
   --foreground: #ededed;
   --accent: var(--deep-sky-blue);
   --accent-foreground: #0a0a0a;
-  --surface: rgba(10,10,10,0.6);
-  --surface-muted: rgba(16,16,16,0.6);
-  --border-color: rgba(255,255,255,0.12);
+  --surface: rgba(10, 10, 10, 0.6);
+  --surface-muted: rgba(16, 16, 16, 0.6);
+  --border-color: rgba(255, 255, 255, 0.12);
   --particle: rgba(56, 189, 248, 0.7);
 }
 
 body {
-  background: radial-gradient(1200px 600px at 50% -10%, rgba(31,72,126,.12), transparent),
+  background: radial-gradient(1200px 600px at 50% -10%, rgba(31, 72, 126, .12), transparent),
     var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
@@ -56,7 +60,10 @@ body {
     "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-display), var(--font-geist-sans), ui-sans-serif,
     system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans,
     sans-serif;
@@ -86,6 +93,26 @@ section {
 .neon-shadow {
   box-shadow: 0 0 32px rgba(56, 189, 248, 0.15);
 }
+
 .neon-border {
   border-color: color-mix(in oklab, var(--accent) 60%, transparent);
+}
+
+.text-neon-blue {
+  color: var(--deep-sky-blue);
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+.text-neon-purple {
+  color: #ff00ff;
+  text-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
+}
+
+.text-neon-green {
+  color: var(--celadon);
+  text-shadow: 0 0 20px rgba(172, 247, 193, 0.4);
+}
+
+.drop-shadow-neon {
+  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.3));
 }
