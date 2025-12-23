@@ -6,9 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Github } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
-const isDev = process.env.NODE_ENV !== "production";
-const rawBlog = process.env.NEXT_PUBLIC_BLOG_ENABLED ?? process.env.BLOG_ENABLED;
-const blogEnabled = rawBlog === "true" || (rawBlog == null && isDev);
+const blogEnabled = true;
 
 const navItems = [
   { href: "/#home", label: "Home" },
