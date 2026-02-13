@@ -2,22 +2,9 @@
 
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Parallax, Reveal } from "@/components/motion/scroll";
-import { Tilt } from "@/components/motion/tilt";
-import Link from "next/link";
-
-type Project = {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  links?: { demo?: string; github?: string };
-  blogLink?: string;
-};
+import { Reveal } from "@/components/motion/scroll";
+import { ProjectCard, type Project } from "./project-card";
 
 const allProjects: Project[] = [
   {
@@ -105,83 +92,7 @@ export function Projects() {
         <motion.div layout className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">
             {filtered.map((project) => (
-              <motion.div
-                layout
-                key={project.id}
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 16 }}
-                transition={{ duration: 0.25 }}
-              >
-                <Parallax>
-                  <Tilt>
-                    <Card className="overflow-hidden group neon-shadow border neon-border bg-[--surface-muted]">
-                      <div className="bg-[--surface-muted]">
-                        {project.image.toLowerCase().endsWith(".mp4") ? (
-                          <video
-                            src={project.image}
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            preload="metadata"
-                            className="w-full h-auto object-contain"
-                          />
-                        ) : (
-                          <>
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img
-                              src={project.image}
-                              alt={project.title}
-                              loading="lazy"
-                              decoding="async"
-                              className="w-full h-auto object-contain"
-                            />
-                          </>
-                        )}
-                      </div>
-                      <CardHeader>
-                        <CardTitle>{project.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                          {project.description}
-                        </p>
-                        <div className="mt-3 flex flex-wrap gap-2">
-                          {project.tags.map((t) => (
-                            <Badge key={t} variant="secondary">
-                              {t}
-                            </Badge>
-                          ))}
-                        </div>
-                        <div className="mt-4 flex gap-2">
-                          {project.links?.demo && (
-                            <Button asChild>
-                              <a href={project.links.demo} target="_blank">
-                                Live demo
-                              </a>
-                            </Button>
-                          )}
-                          {project.links?.github && (
-                            <Button asChild variant="outline">
-                              <a href={project.links.github} target="_blank">
-                                GitHub
-                              </a>
-                            </Button>
-                          )}
-                          {project.blogLink && (
-                            <Button asChild variant="secondary" className="border-zinc-700 bg-zinc-800 hover:bg-zinc-700">
-                              <Link href={project.blogLink}>
-                                Read Blog
-                              </Link>
-                            </Button>
-                          )}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Tilt>
-                </Parallax>
-              </motion.div>
+              <ProjectCard key={project.id} project={project} />
             ))}
           </AnimatePresence>
         </motion.div>
