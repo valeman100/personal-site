@@ -33,27 +33,32 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <Parallax>
                 <Tilt>
                     <Card className="overflow-hidden group neon-shadow border neon-border bg-[--surface-muted] h-full flex flex-col">
-                        <div className="bg-[--surface-muted] relative aspect-video overflow-hidden">
-                            {project.image.toLowerCase().endsWith(".mp4") ? (
-                                <video
-                                    src={project.image}
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
-                                    preload="metadata"
-                                    className="w-full h-full object-cover"
-                                />
-                            ) : (
-                                /* eslint-disable-next-line @next/next/no-img-element */
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    loading="lazy"
-                                    decoding="async"
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                />
-                            )}
+                        <div className="bg-zinc-100 dark:bg-zinc-900 p-3 pb-0">
+                            {/* Browser chrome */}
+                            <div className="rounded-t-lg border border-b-0 border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 overflow-hidden">
+                                {/* Title bar */}
+                                <div className="flex items-center gap-2 px-3 py-2 border-b border-zinc-200 dark:border-zinc-700">
+                                    <div className="flex gap-1.5">
+                                        <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+                                        <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+                                        <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
+                                    </div>
+                                    <div className="flex-1 mx-2">
+                                        <div className="h-5 rounded-md bg-zinc-200 dark:bg-zinc-700 max-w-[60%] mx-auto" />
+                                    </div>
+                                </div>
+                                {/* Screenshot */}
+                                <div className="relative aspect-[16/10] overflow-hidden">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        loading="lazy"
+                                        decoding="async"
+                                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                    />
+                                </div>
+                            </div>
                         </div>
                         <CardHeader>
                             <CardTitle className="line-clamp-1">{project.title}</CardTitle>

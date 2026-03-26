@@ -26,18 +26,18 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Valerio Mannucci — AI & Software Engineer",
   description:
-    "Developing delightful experiences powered by modern LLMs, with a focus on performance, accessibility, and clean architecture.",
+    "Freelance AI & software engineer helping businesses automate processes and build intelligent products.",
   openGraph: {
     title: "Valerio Mannucci — AI & Software Engineer",
     description:
-      "Developing delightful experiences powered by modern LLMs, with a focus on performance, accessibility, and clean architecture.",
+      "Freelance AI & software engineer helping businesses automate processes and build intelligent products.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Valerio Mannucci — AI & Software Engineer",
     description:
-      "Developing delightful experiences powered by modern LLMs, with a focus on performance, accessibility, and clean architecture.",
+      "Freelance AI & software engineer helping businesses automate processes and build intelligent products.",
   },
   icons: {
     icon: [

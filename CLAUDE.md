@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## MCP Tools — Serena (REQUIRED)
+
+Serena MCP is configured for this project. Always prefer Serena tools over built-in Glob/Grep/Read/Edit for code navigation and editing. Fall back to built-in tools only when Serena is unavailable.
+
 ## Development Commands
 
 ```bash

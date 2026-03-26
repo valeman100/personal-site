@@ -116,3 +116,19 @@ section {
 .drop-shadow-neon {
   filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.3));
 }
+
+.text-gradient-neon {
+  background: linear-gradient(135deg, var(--deep-sky-blue), var(--celadon));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(56, 189, 248, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(56, 189, 248, 0.4); }
+}
