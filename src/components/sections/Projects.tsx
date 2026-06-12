@@ -18,10 +18,10 @@ const allProjects: Project[] = [
     {
         id: "ikigai-force",
         title: "Ikigai Force",
-        description: "Interactive app that walks you through the Japanese Ikigai framework — what you love, what you're good at, what the world needs, and what you can be paid for.",
+        description: "Productivity app built on a single-focus philosophy: one goal, one task a day, zero decision fatigue. It distills your ikigai into a sustainable daily action so you make progress without burning out.",
         image: "/projects/ikigai-force.png",
-        tags: ["AI", "React", "Frontend"],
-        links: {},
+        tags: ["AI", "React", "Frontend", "Productivity"],
+        links: { demo: "https://ikigaiforce.com/" },
     },
     {
         id: "p1",
