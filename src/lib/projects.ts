@@ -12,15 +12,14 @@ export type Project = {
 
 export const featuredProjects: Project[] = [
   {
-    id: "aesthetica-ai",
-    title: "Aesthetica AI",
+    id: "ikigai-force",
+    title: "Ikigai Force",
     description:
-      "Local AI solution for automating pre/post cosmetic surgery image management. Automatic pose classification, intelligent matching, and adaptive image processing for consistent patient records.",
-    image: "/projects/aesthetic-ai.jpeg",
-    tags: ["AI", "Computer Vision", "Python", "Automation"],
+      "Interactive app that walks you through the Japanese Ikigai framework — what you love, what you're good at, what the world needs, and what you can be paid for.",
+    image: "/projects/ikigai-force.png",
+    tags: ["Self-discovery", "AI", "React"],
     accent: "var(--deep-sky-blue)",
-    blogLink: "/blog/aesthetica-ai",
-    status: "live",
+    status: "coming-soon",
   },
   {
     id: "email-labeler",
@@ -44,13 +43,14 @@ export const featuredProjects: Project[] = [
     status: "client",
   },
   {
-    id: "ikigai-force",
-    title: "Ikigai Force",
+    id: "aesthetica-ai",
+    title: "Aesthetica AI",
     description:
-      "Interactive app that walks you through the Japanese Ikigai framework — what you love, what you're good at, what the world needs, and what you can be paid for.",
-    image: "/projects/ikigai-force.png",
-    tags: ["Self-discovery", "AI", "React"],
+      "Local AI solution for automating pre/post cosmetic surgery image management. Automatic pose classification, intelligent matching, and adaptive image processing for consistent patient records.",
+    image: "/projects/aesthetic-ai.jpeg",
+    tags: ["AI", "Computer Vision", "Python", "Automation"],
     accent: "var(--deep-sky-blue)",
-    status: "coming-soon",
+    blogLink: "/blog/aesthetica-ai",
+    status: "live",
   },
 ];
