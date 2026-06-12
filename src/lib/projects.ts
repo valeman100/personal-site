@@ -19,7 +19,8 @@ export const featuredProjects: Project[] = [
     image: "/projects/ikigai-force.png",
     tags: ["Self-discovery", "AI", "React"],
     accent: "var(--deep-sky-blue)",
-    status: "coming-soon",
+    links: { demo: "https://ikigaiforce.com/" },
+    status: "live",
   },
   {
     id: "email-labeler",

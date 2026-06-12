@@ -29,14 +29,30 @@ function StatusDot({ status }: { status?: Project["status"] }) {
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const isEven = index % 2 === 0;
 
+  // Whole-card destination: prefer external demo, fall back to the case study.
+  const cardHref = project.links?.demo ?? project.blogLink ?? null;
+  const cardIsExternal = Boolean(project.links?.demo);
+
   return (
     <Reveal delay={index * 0.08}>
       <Tilt maxTiltDeg={3} scale={1.01}>
         <motion.div
-          className="group relative grid md:grid-cols-2 gap-0 rounded-2xl border border-[var(--border-color)] bg-[--surface] overflow-hidden"
+          className={`group relative grid md:grid-cols-2 gap-0 rounded-2xl border border-[var(--border-color)] bg-[--surface] overflow-hidden ${
+            cardHref ? "cursor-pointer" : ""
+          }`}
           whileHover={{ boxShadow: `0 0 40px color-mix(in oklab, ${project.accent} 20%, transparent)` }}
           transition={{ duration: 0.3 }}
         >
+          {/* Stretched overlay link — makes the whole card clickable. Inner
+              links sit on a higher z-index so they keep their own targets. */}
+          {cardHref && (
+            <Link
+              href={cardHref}
+              aria-label={`Open ${project.title}`}
+              className="absolute inset-0 z-10"
+              {...(cardIsExternal ? { target: "_blank", rel: "noreferrer" } : {})}
+            />
+          )}
           {/* Image side */}
           <div
             className={`relative md:aspect-auto overflow-hidden flex items-center justify-center p-6 sm:p-8 ${
@@ -115,8 +131,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 ))}
               </div>
 
-              {/* Links */}
-              <div className="flex items-center gap-3">
+              {/* Links — relative z-20 keeps them above the stretched overlay */}
+              <div className="relative z-20 flex items-center gap-3">
                 {project.links?.demo && (
                   <a
                     href={project.links.demo}
