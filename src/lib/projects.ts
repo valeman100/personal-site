@@ -37,11 +37,22 @@ export const featuredProjects: Project[] = [
     id: "insurance-automation",
     title: "Insurance Quote Engine",
     description:
-      "Process automation for an insurance broker: given a client profile, the system generates and compares quotes from multiple providers — turning hours of manual work into seconds.",
+      "The automation engine behind the service: given a client profile, it generates and compares quotes across multiple providers and handles the repetitive back-office work — turning hours of manual effort into seconds.",
     image: "/projects/insurance-automation.png",
     tags: ["Automation", "AI", "Playwrite", "Insurance"],
     accent: "var(--tyrian-purple)",
     status: "client",
+  },
+  {
+    id: "broker-automations",
+    title: "Broker Automations",
+    description:
+      "The public service site I designed and built end-to-end to onboard PMI insurance brokers: bespoke automations for deadlines & renewals, data extraction from carrier PDFs, IVASS paperwork, and multi-insurer quoting.",
+    image: "/projects/broker-automations.png",
+    tags: ["Next.js", "Frontend", "Design", "Insurance"],
+    accent: "var(--polynesian-blue)",
+    links: { demo: "https://broker-automations.valeriomannucci.com/" },
+    status: "live",
   },
   {
     id: "aesthetica-ai",
