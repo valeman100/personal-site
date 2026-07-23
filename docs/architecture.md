@@ -63,3 +63,7 @@ Typed content lives in `src/lib/`:
 - `products.ts` → `products: Product[]`.
 
 Edit these arrays to change displayed projects/products; components render from them.
+
+**Careful:** the resume page does *not* read `src/lib/projects.ts`. `src/components/sections/Projects.tsx` holds its own hardcoded `allProjects` array (longer list, filterable by the `All / AI / Frontend / Backend` tags). Adding or editing a project usually means touching **both** lists.
+
+Bio copy that mentions roles/companies lives in three more places and must stay in sync: `src/components/landing/BriefAbout.tsx`, `src/components/sections/About.tsx`, and `src/components/sections/Experience.tsx` (`items` array).

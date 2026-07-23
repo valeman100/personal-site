@@ -41,7 +41,7 @@ function AnimatedNumber({
 const stats = [
   { value: 4, suffix: "+", label: "Years building AI" },
   { value: 20, suffix: "+", label: "Projects delivered" },
-  { value: 2, suffix: "", label: "Products launched" },
+  { value: 3, suffix: "", label: "Products launched" },
 ];
 
 export function SocialProof() {

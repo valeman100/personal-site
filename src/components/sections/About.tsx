@@ -76,6 +76,20 @@ export function About() {
                 My goal is to work on meaningful, challenging projects with people and teams I genuinely connect with—while building a life that feels authentic, free, and aligned with my passions.
               </p>
             </Reveal>
+            <Reveal delay={0.075}>
+              <p className="text-zinc-600 dark:text-zinc-400">
+                Alongside client work I&apos;m cofounder of{" "}
+                <a
+                  href="https://www.art-lab.space/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[--accent] hover:underline underline-offset-4"
+                >
+                  ARTLAB
+                </a>
+                , an independent online gallery where artists from anywhere show their work to art lovers everywhere. I lead the whole development side — gallery and artist pages, the Salon and interviews, and the tiered artist plans with subscriptions and sales inquiries.
+              </p>
+            </Reveal>
             <Reveal delay={0.1}>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <StatCard value={3} label="Years of Experience" />

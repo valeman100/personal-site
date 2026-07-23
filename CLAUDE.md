@@ -1,5 +1,11 @@
 # CLAUDE.md
 
+## Every session, before anything
+- **Serena first**: call `serena/initial_instructions` and `serena/check_onboarding_performed` at the start of every session, then prioritize Serena MCP tools for all code reading and editing.
+- **Caveman mode is on by default** — terse output, full technical accuracy (caveman skill). Off only on "stop caveman" / "normal mode".
+- **Docs + memory stay in sync with code**: when a change touches an area a `docs/` file or the auto-memory (`MEMORY.md` + linked files) describes, update that doc/memory **in the same task**. Code, docs, and memory must never drift. Fix the touched doc even for a one-line code change.
+
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## What this is

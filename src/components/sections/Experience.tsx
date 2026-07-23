@@ -3,6 +3,13 @@ import { Reveal, Parallax } from "@/components/motion/scroll";
 export function Experience() {
   const items = [
     {
+      role: "Cofounder & Head of Engineering",
+      company: "ARTLAB — Remote",
+      period: "Jun. 2026 — Current",
+      desc:
+        "Cofounder of an independent online gallery that lets artists from anywhere show their work to art lovers everywhere. I run the entire development side: the public gallery and artist pages, the Salon and interview sections, and the tiered artist plans (Open, Space, Curated) with subscriptions and sales inquiries.",
+    },
+    {
       role: "Freelance AI & Software Engineer",
       company: "Remote",
       period: "Nov. 2025 — Current",

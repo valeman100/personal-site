@@ -12,6 +12,17 @@ export type Project = {
 
 export const featuredProjects: Project[] = [
   {
+    id: "artlab",
+    title: "ARTLAB",
+    description:
+      "Independent online gallery where artists from anywhere show their work to art lovers everywhere. I'm cofounder and own the whole engineering side: the public gallery and artist pages, the Salon and interview sections, and the tiered artist plans (Open, Space, Curated) with subscriptions and sales inquiries.",
+    image: "/projects/artlab.jpg",
+    tags: ["Next.js", "Startup", "Cofounder", "Marketplace"],
+    accent: "var(--tyrian-purple)",
+    links: { demo: "https://www.art-lab.space/" },
+    status: "live",
+  },
+  {
     id: "ikigai-force",
     title: "Ikigai Force",
     description:

@@ -8,6 +8,14 @@ import {ProjectCard, type Project} from "./project-card";
 
 const allProjects: Project[] = [
     {
+        id: "artlab",
+        title: "ARTLAB",
+        description: "Independent online gallery where artists from anywhere show their work to art lovers everywhere. Cofounder and sole engineer: public gallery and artist pages, the Salon and interview sections, and the tiered artist plans (Open, Space, Curated) with subscriptions and sales inquiries.",
+        image: "/projects/artlab.jpg",
+        tags: ["Next.js", "Frontend", "Backend", "Design", "Startup"],
+        links: { demo: "https://www.art-lab.space/" },
+    },
+    {
         id: "insurance-automation",
         title: "Insurance Quote Engine",
         description: "The automation engine behind the service: given a client profile, it generates and compares quotes across multiple providers and handles the repetitive back-office work — turning hours of manual effort into seconds.",

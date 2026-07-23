@@ -26,13 +26,28 @@ export function BriefAbout() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <p className="text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">
+              <p className="text-zinc-600 dark:text-zinc-400 mb-4 leading-relaxed">
                 I specialize in turning complex workflows into streamlined, AI-powered
                 solutions — from insurance process automation to SaaS products and
                 computer-vision pipelines.
               </p>
             </Reveal>
             <Reveal delay={0.15}>
+              <p className="text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">
+                I&apos;m also cofounder of{" "}
+                <a
+                  href="https://www.art-lab.space/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[--accent] hover:underline underline-offset-4"
+                >
+                  ARTLAB
+                </a>
+                , an independent online gallery where artists from anywhere show
+                their work to art lovers everywhere — I lead all of its engineering.
+              </p>
+            </Reveal>
+            <Reveal delay={0.2}>
               <Link
                 href="/resume"
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-[--accent] hover:underline underline-offset-4"
