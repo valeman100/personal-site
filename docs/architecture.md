@@ -14,7 +14,7 @@ src/
   │   ├── robots.ts       # robots.txt route
   │   ├── sitemap.ts      # sitemap.xml route
   │   ├── opengraph-image.png  # default OG image (file-convention)
-  │   ├── layout.tsx      # Root layout with fonts (Geist, Bricolage Grotesque) and metadata
+  │   ├── layout.tsx      # Root layout with fonts (Geist, Bricolage Grotesque), metadata, Umami tracker (pulse.valeriomannucci.com, self-hosted on the Oracle VM)
   │   ├── providers.tsx   # Theme provider, MDX provider, toast setup
   │   └── globals.css     # Design tokens, theme switches (light/dark), gradients, neon utilities
   ├── components/

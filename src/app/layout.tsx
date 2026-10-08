@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { siteUrl } from "@/lib/site";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Bricolage_Grotesque } from "next/font/google";
@@ -69,6 +70,13 @@ export default function RootLayout({
           {children}
           <Footer />
         </Providers>
+        {/* Umami analytics (self-hosted on the Oracle VM); data-domains is an exact match. */}
+        <Script
+          src="https://pulse.valeriomannucci.com/p.js"
+          data-website-id="5cc11dae-41ae-4c72-8d08-10dae30a516e"
+          data-domains="www.valeriomannucci.com,valeriomannucci.com"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
